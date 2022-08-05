@@ -1,6 +1,9 @@
 - hosts: all
   become: true
-
+  user: ubuntu
+  become: true
+  gather_facts: false
+  
 - tasks:
     - name: Install Apache
       apt: 
